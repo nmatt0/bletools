@@ -25,3 +25,7 @@ if not services:
 else:
     for service in services:
         print(service)
+        for char in service.characteristics:
+            print(char)
+            print(char.properties)
+            #if "read" in char.properties:
