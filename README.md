@@ -1,6 +1,15 @@
 # bletools
 BLE pentesting scripts
 
+##
+
+setup bluetooth on arch linux
+```
+pacman -S bluez bluez-utils
+systemctl start bluetooth
+bluetoothctl power on
+```
+
 ## Example Server
 
 use this project to run a GATT server:
