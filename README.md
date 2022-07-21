@@ -19,7 +19,19 @@ This program scans for BLE devices that are advertising
 usage: ./scan.py <scan time>
 ```
 
-### read.py
-```
+### services.py
+
+This program connects to a BLE device and enumerates its services
 
 ```
+usage: ./services.py <device MAC>
+```
+
+### read.py
+
+This program connects to a BLE device and reads a characteristic
+
+```
+usage: ./read.py <device MAC> <characteristic UUID>
+```
+
