@@ -13,6 +13,8 @@ timeout=int(sys.argv[1])
 
 # list of BLEDevice (https://bleak.readthedocs.io/en/latest/api.html#bleak.backends.device.BLEDevice)
 devices = asyncio.run(scan(timeout))
+devices = sorted(devices, key=lambda k: k.rssi, reverse=True)
+
 for d in devices:
     print(d.address)
     print("\tName: "+d.name)
