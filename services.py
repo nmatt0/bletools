@@ -20,6 +20,8 @@ address = sys.argv[1]
 
 services = asyncio.run(services(address))
 
+#print(characteristics)
+
 if not services:
     print("not found")
 else:

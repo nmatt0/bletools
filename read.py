@@ -5,15 +5,14 @@ import sys
 import binascii
 
 async def read(address,uuid):
-    client = BleakClient(address)
     data = False
     try:
-        await client.connect()
-        data = await client.read_gatt_char(uuid)
+        async with BleakClient(address) as client:
+            print(client.mtu_size)
+            #client.mtu_size = 512
+            data = await client.read_gatt_char(uuid)
     except Exception as e:
         print(e)
-    finally:
-        await client.disconnect()
     return data
 
 if len(sys.argv) < 3:
