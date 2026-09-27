@@ -36,7 +36,16 @@ pip3 install bleak
 This program scans for BLE devices that are advertising
 
 ```
-usage: ./scan.py <scan time>
+usage: scan.py [-h] [--decode] [--json] [--filter FILTER] timeout
+
+positional arguments:
+  timeout          Scan time
+
+options:
+  -h, --help       show this help message and exit
+  --decode         Try to decode advertisement data
+  --json           JSON output
+  --filter FILTER  Filter MAC addresses starting with FILTER
 ```
 
 ### services.py
